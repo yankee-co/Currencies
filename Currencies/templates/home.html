@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      td{
+        border:1px solid black ;
+        text-align: center;
+        padding: 3px 10px 3px 10px;
+      }
+      tr{
+        background-color: #13d2b4;
+        font-family: Garamond;
+        font-weight: 600;
+      }
+      td.u{
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Actual for date: {{today}}</h3>
+    <table>
+    {% for instance in data %}
+      <tr>
+        <td>{{instance.currency}}</td>
+        <td class = 'u'>{{instance.value}}</td>
+      </tr>
+    {% endfor %}
+    </table>
+  </body>
+</html>
